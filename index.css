@@ -5,14 +5,16 @@ body {
     align-items: center;
     background-color: rgb(225, 193, 255);
     margin-top: 20px;
+    gap: 80px;
 }
 
 .title {
     color: rgb(204, 75, 97);
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 50px;
     animation: h1wave 3s ease-in-out infinite;
+    margin-top: 50px;
 }
 
 .second {
@@ -20,20 +22,29 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 50px;
+    gap: 100px;
 }
 
-.contain {
-    display: flex;
+
+.contain1 {
     justify-content: start;
+}
+.contain2 {
+    justify-content: center;
+    align-items: center;
+}
+.contain1, .contain2 {
+    display: flex;
     flex-direction: column;
     width: 500px;
-    height: 450px;
+    height: 500px;
+    border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: transform .5s ease-in, box-shadow .5s ease-in, h1wave 5s ease-in-out infinite;
+    transition: transform 1s ease-in, box-shadow .5s ease-in;
+    background-color: rgb(253, 214, 242);
 }
-.contain:hover {
-    transform: translateY(-5);
+.contain1:hover, .contain2:hover {
+    transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -43,11 +54,10 @@ body {
     100% {transform: translateY(0px);}
 }
 
-
 label {
     color: blueviolet;
     font-size: 40px;
-    margin: 13px 30px
+    margin: 15px 30px
 }
 
 .input1, .input1 {
@@ -58,7 +68,6 @@ label {
     border: none;
     transition: transform 2s ease-in-out;
 }
-
 .input1:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -70,7 +79,7 @@ label {
 }
 
 .calculate {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 400px;
     height: 50px;
     color: rgb(255, 255, 255);
@@ -78,7 +87,46 @@ label {
     font-size: 20px;
     border-radius: 20px;
     border: none;
+    cursor: pointer;
     background-color: rgb(111, 46, 171);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.titlepay {
+    color: rgb(255, 68, 99);
+    font-size: 40px;
+}
+
+.des {
+    color: rgb(71, 71, 71);
+    margin-top: -15px;
+}
+
+#payslipbox {
+    display: none;
+    justify-content: flex-start;
+}
+
+.result-area {
+    width: 80%;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.result-area p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+hr {
+    width: 90%;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.net-pay {
+    display: flex;
+    justify-content: space-between;
+    color:rgb(105, 61, 147)
+}
