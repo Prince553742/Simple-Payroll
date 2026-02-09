@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(225, 193, 255);
+    margin-top: 20px;
+}
+
+.title {
+    color: rgb(204, 75, 97);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 50px;
+    animation: h1wave 3s ease-in-out infinite;
+}
+
+.second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.contain {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 500px;
+    height: 450px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform .5s ease-in, box-shadow .5s ease-in, h1wave 5s ease-in-out infinite;
+}
+.contain:hover {
+    transform: translateY(-5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes h1wave {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0px);}
+}
+
+
+label {
+    color: blueviolet;
+    font-size: 40px;
+    margin: 30px 30px
+}
+
+.input1, .input1 {
+    width: 300px;
+    margin-left: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    transition: transform 2s ease-in-out;
+}
+
+.input1:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
