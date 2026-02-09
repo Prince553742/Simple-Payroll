@@ -12,18 +12,31 @@
     <body>
         <h1 class="title">SIMPLE PAYROLL</h1>
         <div class="second">
-            <div class="contain">
+            <div class="contain1">
                 <label>Employee Name</label>
-                <input class="input1" type="text" placeholder="Enter Name">
+                <input class="input1" id="emploname" type="text" placeholder="Enter Name">
                 <label>Hourly Rate</label>
-                <input class="input1" type="number" placeholder="Enter Hourly Rate">
+                <input class="input1" id="hourrate" type="number" placeholder="Enter Hourly Rate">
                 <label>Hours Worked</label>
-                <input class="input1" type="number" placeholder="Enter Worked Hours">
+                <input class="input1" id="hourwork" type="number" placeholder="Enter Worked Hours">
                 <div class="cal">
-                    <button class="calculate">Calculate Payroll</button>
+                    <button class="calculate" onclick="generatePayroll()">Calculate Payroll</button>
                 </div>
             </div>
-            <div class="contain">
+            <div class="contain2" id="payslipbox">
+                <h1 class="titlepay">Pay Slip</h1>
+                <p class="des">Employee Payroll Summary</p>
+                <hr>
+                <div class="result-area">
+                    <p>Employee: <span id="resName"></span></p>
+                    <p>Gross Pay: <span id="resGross"></span></p>
+                    <p>Tax (20%): <span id="resTax"></span></p>
+                    <p>SSS: <span>₱ 750</span></p>
+                    <p>PhilHealth: <span>₱ 500</span></p>
+                    <p>Pag-IBIG: <span>₱ 800</span></p>
+                    <hr>
+                    <h2 class="net-pay">Net Pay: <span id="resNet"></span></h2>
+                </div>
             </div>
         </div>
     </body>
